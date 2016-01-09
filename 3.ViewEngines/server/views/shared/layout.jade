@@ -1,0 +1,24 @@
+doctype
+html
+    head
+        title Mobile phones
+        link(rel="stylesheet" href="/libs/bootstrap-3.3.6-dist/css/bootstrap.min.css")
+
+    body
+        nav.navbar.navbar-default
+            ul.nav.navbar-nav
+                li
+                    a(href='/') HOME
+                each name in ['Smartphones', 'Tablets', 'Wearables']
+                    li
+                        a(href='/' + name)
+                            = name
+
+        block main-content
+
+        footer
+            p.text-center
+                | &copy; TelericAcademy 2015 View Engines Homework
+
+        script(type="text/javascript" src="/libs/jquery/jquery-2.1.4.min.js")
+        script(type="text/javascript" src="/libs/bootstrap-3.3.6-dist/js/bootstrap.min.js")

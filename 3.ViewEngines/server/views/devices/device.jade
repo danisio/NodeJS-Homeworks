@@ -1,0 +1,15 @@
+extends ../shared/layout
+
+block main-content
+    .container.jumbotron
+        h1.text-center #{device}
+        table.table.table-bordered
+            tr
+                th Brand
+                th Model
+                th Price
+            each file in files
+                tr
+                    td #{file.brand}
+                    td #{file.model}
+                    td $ #{file.price}
