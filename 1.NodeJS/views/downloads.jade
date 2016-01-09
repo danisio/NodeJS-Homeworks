@@ -1,0 +1,14 @@
+doctype html
+head
+    meta(charset="UTF-8")
+    title Download
+body
+    a(href='/') Home
+    br
+    a(href='/upload') Upload new file
+    hr
+    ol
+        h3 Last uploaded files:
+        each file in files
+            li
+                a(href='../files/' + file) !{file}
