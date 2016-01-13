@@ -1,0 +1,18 @@
+extends ../shared/layout
+
+block main-content
+    .container.jumbotron
+        h1.text-center List of all ads
+        table.table.table-bordered
+            tr
+                th Title
+                th Category
+                th Description
+                th Price
+            each ad in ads
+                tr
+                    td
+                        a(href='/ads/details/#{ad.id}') #{ad.title}
+                    td #{ad.category}
+                    td #{ad.description}
+                    td #{ad.price}

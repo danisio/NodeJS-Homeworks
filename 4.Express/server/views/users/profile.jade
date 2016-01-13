@@ -1,0 +1,10 @@
+extends ../shared/layout
+
+block main-content
+    .container.jumbotron
+                h3.text-center Hello, #{user.username}
+                br
+                ul List of your ads
+                    each ad in user.ads
+                        li
+                            a(href='/ads/details/#{ad.id}') #{ad.title}

@@ -1,0 +1,21 @@
+extends ../shared/layout
+
+block main-content
+    .container.jumbotron
+        h2.text-center Details
+        table.table.table-bordered
+            tr
+                th Title
+                th Category
+                th Description
+                th Price
+                th User
+                th Image
+            each prop in ad
+                tr
+                    td #{prop.title}
+                    td #{prop.category}
+                    td #{prop.description}
+                    td #{prop.price}
+                    td #{prop.username}
+                    td #{prop.image ? prop.image: '---'}

@@ -1,0 +1,22 @@
+extends ../shared/layout
+
+block main-content
+        form(method="post" id="form-upload" enctype="multipart/form-data")
+            label(for="title") Title
+            input(id="title" class="form-control" type="text" name="title" placeholder="Title")
+            br
+            label(for="category") Category
+            select(id="category" class="form-control" name="category")
+                for cat in categories
+                    option(value="#{cat}") #{cat}
+            br
+            label(for="description") Description
+            input(id="description" class="form-control" type="text" name="description" placeholder="Description")
+            br
+            label(for="image") Image
+            input(id="image" class="form-control" type="file" name="fileData")
+            br
+            label(for="price") Price
+            input(id="price" class="form-control" type="number" name="price" placeholder="Price")
+            br
+            input(type="submit" class="btn btn-lg" value="Add")
